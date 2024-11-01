@@ -85,12 +85,12 @@ body {
     overflow-x: auto;
     margin: 0;
     width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .horizontal-scroll-wrapper::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome, Safari and Opera */
 }
 
 .horizontal-scroll {
@@ -111,7 +111,7 @@ body {
 
 .video-container {
     position: relative; /* Necessário para o overlay */
-    padding-bottom: 177.78%; /* Proporção 16:9 */
+    padding-bottom: 177.78%; /* Proporção 9:16 (vertical) */
     height: 0;
     overflow: hidden;
 }
@@ -122,11 +122,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Garante que fique acima do iframe */
+    z-index: 1;
     background-color: transparent;
-    /* cursor: pointer; Opcional: muda o cursor */
+    /* cursor: pointer;  Opcional */
 }
-
 
 .video-container iframe {
     position: absolute;
@@ -148,6 +147,9 @@ body {
     text-align: center;
 }
 
+.text-section p {
+    margin: 0;
+}
 
 .descricao {
     max-width: 800px;
@@ -167,14 +169,12 @@ body {
     font-weight: 400;
 }
 
-
-
 @media (max-width: 768px) {
     .video-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     .horizontal-scroll {
-        justify-content: flex-start; /* Alinha os vídeos à esquerda */
+        justify-content: flex-start;
     }
 
     h1 {
