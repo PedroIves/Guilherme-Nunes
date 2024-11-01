@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storymaker | Guilherme Nunes</title>
-    <link rel="stylesheet" href="CSS.css">
+    <link rel="stylesheet" href="style==.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -31,13 +31,13 @@
                 <div class="video-item">
                     <div class="video-container">
                         <div class="video-overlay"></div>
-                        <iframe id="firstVideo" src="https://www.youtube.com/embed/j56lW2BCY6Q?enablejsapi=1&controls=0&mute=0&autoplay=1&loop=1&playlist=j56lW2BCY6Q" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/j56lW2BCY6Q?enablejsapi=1&controls=0&mute=1&autoplay=1&loop=1&playlist=j56lW2BCY6Q" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-container">
                         <div class="video-overlay"></div>
-                        <iframe src="https://www.youtube.com/embed/kUTCSAgCs9s?enablejsapi=1&controls=0&mute=1&autoplay=1&loop=1&playlist=kUTCSAgCs9s" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/kUTCSAgCs9s?enablejsapi=1&controls=0&mute=1&autoplay=1&loop=1&playlist=kUTCSAgCs9s&playsinline=1" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -50,13 +50,13 @@
                 <div class="video-item">
                     <div class="video-container">
                         <div class="video-overlay"></div>
-                        <iframe src="https://www.youtube.com/embed/G7TwsnEsos8?enablejsapi=1&controls=0&mute=1&autoplay=1&loop=1&playlist=G7TwsnEsos8" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/G7TwsnEsos8?enablejsapi=1&controls=0&mute=1&autoplay=1&loop=1&playlist=G7TwsnEsos8&playsinline=1" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-container">
                         <div class="video-overlay"></div>
-                        <iframe src="https://www.youtube.com/embed/VF7K8ctyUYk?enablejsapi=1&controls=0&mute=1&autoplay=1&loop=1&playlist=VF7K8ctyUYk" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/VF7K8ctyUYk?enablejsapi=1&controls=0&mute=1&autoplay=1&loop=1&playlist=VF7K8ctyUYk&playsinline=1" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -64,31 +64,8 @@
 
         <div class="descricao">
             <h3>Seus seguidores realmente conhecem você?</h3>
-            <p>Sou um storymaker dedicado a transformar histórias em ferramentas estratégicas para empresas que desejam se destacar e criar conexões autênticas com seu público. Após passar por diferentes áreas, encontrei minha verdadeira vocação em construir narrativas que engajam, emocionam e convertem. Com mais de 12 anos de jornada cristã, acredito que meu trabalho vai além de criar conteúdos – é uma missão de dar vida às histórias que realmente conquistam corações e fortalecem marcas.</p>
-            <p>Se você deseja transformar sua marca e engajar seus clientes com propósito e excelência, conte comigo para levar sua história ao próximo nível!</p>
+            <p>Sou um storymaker dedicado a transformar histórias em ferramentas estratégicas para empresas que desejam se destacar e criar conexões autênticas com seu público. Após passar por diferentes áreas, encontrei minha verdadeira vocação em construir narrativas que engajam, emocionam e convertem. </p><p>Com mais de 12 anos de jornada cristã, acredito que meu trabalho vai além de criar conteúdos – é uma missão de dar vida às histórias que realmente conquistam corações e fortalecem marcas.</p><p>Se você deseja transformar sua marca e engajar seus clientes com propósito e excelência, conte comigo para levar sua história ao próximo nível!</p>
         </div>
     </div>
-
-<script>
-    let tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    let firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    function onYouTubeIframeAPIReady() {
-        let player;
-        player = new YT.Player('firstVideo', {
-            events: {
-                'onReady': onPlayerReady
-            }
-        });
-    }
-
-    function onPlayerReady(event) {
-        event.target.playVideo();
-        event.target.setLoop(true);
-        event.target.unMute();
-    }
-</script>
-</body>
+    <script src="script.js"></script> </body>
 </html>
